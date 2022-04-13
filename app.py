@@ -2,11 +2,13 @@ from flask import Flask, request
 from config import connect
 from blueprints.auth import auth
 from blueprints.userDetails import users
+from blueprints.dataEntry import dataEntry
 
 app = Flask(__name__)
 
 app.register_blueprint(auth)
 app.register_blueprint(users)
+app.register_blueprint(dataEntry)
 
 @app.route("/", methods=['GET'])
 def get():

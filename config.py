@@ -14,3 +14,4 @@ params = {
 
 def connect():
     return psycopg2.connect(**params)
+    
